@@ -1,0 +1,14 @@
+server:
+  port: 9090
+
+spring:
+  application:
+    name: hello
+
+  thymeleaf:
+    enabled: true
+    prefix: classpath:/templates/
+    suffix: .html
+    cache: false # ??? ??????????
+
+keySetURI: http://localhost:9000/oauth2/jwks

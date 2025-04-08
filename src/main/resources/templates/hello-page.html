@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Hello World Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 100px;
+        }
+        h1 {
+            color: #2c3e50;
+        }
+
+    </style>
+</head>
+<body>
+<h1 th:text="${message}">Default Hello World</h1>
+
+<!-- Пример с условием -->
+<div th:if="${not #strings.isEmpty(message)}">
+    <p>Это сообщение сгенерировано динамически:</p>
+    <p th:text="${message}"></p>
+</div>
+</body>
+</html>
