@@ -4,11 +4,14 @@ server:
 spring:
   application:
     name: hello
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:9000/oauth2/jwks
 
   thymeleaf:
     enabled: true
     prefix: classpath:/templates/
     suffix: .html
-    cache: false # ??? ??????????
-
-keySetURI: http://localhost:9000/oauth2/jwks
+    cache: false
